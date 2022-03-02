@@ -1,0 +1,1525 @@
+/*고정*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+@font-face {
+    font-family: 'ELAND_Nice_M';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/ELAND_Nice_M.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  line-height: 22px;
+  color: #233b5f;
+  background-color: #f9f8ed;   
+}
+li{list-style: none;}
+a{text-decoration: none; color: #233b5f;}
+/*navbar_top*/
+#navbar_top_wrap{
+  width: 100%;
+  height: 42px;
+  background-color: #fbb040;
+  display: flex;       
+}
+#navbar_top{
+  display: flex;
+  width: 1200px;
+  height: 42px;
+  margin: auto;
+  padding: 10px 0;
+  justify-content: flex-end;             
+}
+.navbar_login{
+  display: flex;
+  width: 300px; 
+  height: 22px;             
+}
+.navbar_login li a{
+  display: block;
+  font-size: 14px;
+  color: #f9f8ed;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 0px 10px;
+}
+.navbar_login li a:hover{
+  opacity: 1;
+  font-weight: 700;
+}
+.navbar_search{
+  width: 130px;
+  height: 22px;
+  padding-left: 10px;        
+}
+.navbar_search input{
+  border: 1px solid #f9f8ed;
+  border-radius: 50px;
+  height: 22px;
+  width: 130px;    
+  outline: 0;
+  background: url(../images/search.png) no-repeat #f9f8ed 8px center;
+  padding-left: 35px    
+}
+.navbar_search input::placeholder{
+  color: #fbb040;
+  font-size: 14px;
+}
+/*navbar_main*/
+#navbar_main_wrap{
+  width: 100%;
+  height: 123px;
+  background-color: #f9f8ed;
+  display: flex;
+}
+#navbar_main{
+  width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.navbar_main_logo{
+  width: 250px;
+  justify-content: space-between;
+  display: flex;
+  align-items: flex-end;
+}
+.navbar_main_logo h4{
+  font-family: "ELAND_Nice_M";
+  font-size: 30px;
+}
+.navbar_main_logo h5{
+  font-family: "ELAND_Nice_M";
+  font-size: 14px;
+}
+.navbar_nav{
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar_nav> li{
+  position: relative;
+}
+.navbar_nav> li> a{
+  display: inline-block;
+  font-family: "ELAND_Nice_M";
+  font-size: 18px;
+  padding-bottom: 22px;    
+  cursor: pointer;
+}
+.navbar_nav> li> a:hover{
+  color: #fbb040;
+}
+.nav_sub{
+  position: absolute;
+  width: 100px;
+  display: hidden;
+  visibility: hidden;        
+  z-index: 4; 
+  background-color: #f9f8ed;
+  padding-top: 5px;
+  padding-bottom: 5px; 
+  border-radius: 4px;    
+  opacity: 0;   
+}
+.nav_sub li a{
+  display: block;    
+  font-family: "Noto Sans KR";  
+  font-size: 14px;
+  padding-left: 10px;
+  font-weight: 700;
+}
+.nav_sub li a:hover{
+  color: #fbb040;
+}
+.nav_sub::before{
+  top:-10px;
+  content: '';
+  position: absolute;   
+  left: calc(10%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #f9f8ed;
+  z-index: 3;        
+}
+.show .nav_sub{
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+.show> a{
+  color: #fbb040;
+}
+/*main*/
+main{
+  width: 100%;
+  height: 500px;
+  background: url(../images/main_bg.jpg) no-repeat;
+}
+.intro{
+  width: 1200px;
+  height: 500px;
+  margin: auto;
+  padding: 100px 0;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.intro h1{
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  color: #f9f8ed;  
+}
+.intro p{
+  color: #f9f8ed;
+  font-size: 16px;  
+  font-weight: 500; 
+  text-align: center; 
+}
+.tabnav{
+  display: flex;  
+}
+.tabnav li{  
+  width: 150px;
+  height: 35px;
+  text-align: center;
+}
+.tabnav a{
+  display: block;
+  color: #f9f8ed;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0px 3px 0px ;  
+  border: #f9f8ed 1.5px solid;
+}
+.tabnav a:hover{
+  background-color: #f9f8ed;
+  color: #233b5f;
+  font-weight: 500;
+}
+.tabnav .active {
+  background: #f9f8ed;
+  color: #233b5f;
+  font-weight: 700;
+}
+/*tab01*/
+.brandstory_bg{ 
+  width: 100%;
+  height: 770px;
+  margin-bottom: 100px;
+  background: url(../images/aboutus.jpg) no-repeat;  
+  overflow: hidden;  
+}
+.brandstory_wrap{
+  width: 1200px;
+  height: 770px;
+  margin: auto;
+  position: relative;
+}
+.roket{
+  position: absolute;
+  top:120px;
+  left: 390px;
+  animation: ani 3s infinite linear;
+}
+@keyframes ani{
+  0%{transform: translate(0,0);}
+  20%{transform: translate(40px,-40px);}
+  40%{transform: translate(80px,-20px);}
+  60%{transform: translate(100px,-40px);}
+  85%{transform: translate(120px,-60px);}  
+  100%{transform: translate(120px,-60px);}  
+}
+.brandstory{
+  width: 300px;
+  margin: auto;
+  height: 110px;
+  text-align: end;
+  position: absolute;
+  top:100px;
+  right: 0px;  
+}
+.brandstory h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f;  
+}
+.brandstory p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;  
+  padding-bottom: 10px;
+  width: 250px;
+  float: right;
+}
+.yellow{
+  color: #fbb040;
+}
+.moon{  
+  width: 550px;
+  height: 400px;
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+}
+.moon h2{
+  font-size: 24px;
+  font-weight: 500;
+  color: #ccc;
+  padding-right: 10px;
+  padding-top: 35px;
+}
+.moon p{
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 38px;
+}
+.mmmm{
+  width: 550px;
+  height: 100px;
+  background: url(../images/M.png) no-repeat;
+  display: flex;  
+  padding-left: 75px;
+}
+.oooo{
+  width: 550px;
+  height: 100px;
+  background: url(../images/O.png) no-repeat;
+  display: flex;
+  padding-left: 75px;
+}
+.o2o2{
+  width: 550px;
+  height: 100px;
+  background: url(../images/OO.png) no-repeat;
+  display: flex;
+  padding-left: 75px;
+}
+.nnnn{
+  width: 550px;
+  height: 100px;
+  background: url(../images/N.png) no-repeat;
+  display: flex;
+  padding-left: 75px;
+}
+.brandlogo_wrap{
+  width: 1200px;
+  height: 650px;
+  margin: auto; 
+}
+.brandlogo{
+  width: 900px;  
+  height: 130px;
+}  
+.brandlogo h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f; 
+  padding-left: 10px; 
+}
+.brandlogo p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;
+}
+.brandlogo_img{
+  width: 900px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  gap:50px
+}
+.brandcolor_wrap{
+  width: 1200px;
+  height: 530px;
+  margin: 100px auto 100px; 
+}
+.brandcolor{
+  width: 900px;  
+  height: 130px;
+}  
+.brandcolor h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f; 
+  padding-left: 10px; 
+}
+.brandcolor p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;
+}
+.colorchip{
+  margin-top: 20px;
+  width: 1200px;
+  height: 400px;
+  display: flex;
+}
+.colorchip h6 a{
+  position: relative;
+  display: inline-block;
+}
+.hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.hover:hover{
+  opacity: 1;
+  transform: all 1s;
+}
+.colorchip h5 a{
+  position: relative;
+  display: inline-block;
+}
+.hover2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.hover2:hover{
+  opacity: 1;
+  transform: all 1s;
+}
+.colorchip h4 a{
+  position: relative;
+  display: inline-block;
+}
+.hover3{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.hover3:hover{
+  opacity: 1;
+  transform: all 1s;
+}
+.brandcharacter_wrap{
+  width: 1200px;
+  height: 550px;
+  margin: 100px auto 100px; 
+}
+.brandcharacter{
+  margin-top: 20px;
+  width: 600px;  
+  height: 130px;
+}  
+.brandcharacter h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f; 
+  padding-left: 10px; 
+}
+.brandcharacter p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;
+}
+.moonrabbit{
+  width: 1200px;
+  height: 400px;
+  margin: 20px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.moonrabbit_img{
+  width: 400px;
+  height: 400px;
+}
+.character_text{
+  width: 750px;
+  height: 400px;
+  padding: 10px 40px;
+}
+.character_text h1{  
+  font-size: 34px;
+  font-family: "ELAND_Nice_M";
+  padding-left: 10px;
+}
+.name{
+  font-family: "Noto Sans KR";
+  font-size: 24px;
+}
+.character_text p{
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.character_text ul{
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  padding-left: 10px;
+}
+.character_text ul li{
+  background-color: #fbb040;
+  color: #f9f8ed;
+  font-size: 16px;
+  padding: 0px 5px;
+}
+.character_bg{
+  background-color: #0a2855;
+  border-radius: 20px;
+  width: 650px;
+  height: 240px;
+  padding: 15px 25px;
+  margin-top: 15px;
+}
+dl{
+  display: flex;  
+  gap: 10px;
+  color: white;
+  margin-top: 15px;  
+}
+dt{
+  font-weight: 700;
+  font-size: 18px;
+}
+dd{
+  font-size: 16px;
+}
+.ment{
+  margin-bottom: 40px;
+  height: 700px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-sizing: content-box;
+}
+.ment h1{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-272px,-60px);
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #f9f8ed;
+  font-family: 'ELAND_Nice_M';
+    
+}
+.noite {
+  background: -webkit-linear-gradient(top, rgb(0, 0, 0) 50%, #0a2855 80%, #233b5f);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  box-sizing: content-box;
+}
+.constelacao {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  animation: rotate 200s infinite linear;
+  box-sizing: content-box;
+}
+.estrela {
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  animation-name: estrela;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  box-sizing: content-box;
+  animation-duration: 0.1s;
+}
+.estrela.style1 { animation-duration: 0.1s; animation-name: estrela; }
+.estrela.style2 { animation-duration: 0.3s; animation-name: estrela; }
+.estrela.style3 { animation-duration: 0.5s; animation-name: estrela; }
+.estrela.style4 { animation-duration: 1s; animation-name: estrelaDestacada; }
+.estrela.tam1 { width: 1px; height: 1px; }
+.estrela.tam2 { width: 2px; height: 2px; }
+.estrela.tam3 { width: 3px; height: 3px; }
+.estrela.opacity1 { opacity:  1; }
+.estrela.opacity2 { opacity: .5; }
+.estrela.opacity3 { opacity: .1; }
+.meteoro {
+  position: absolute;
+  background-color: #fff;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  box-sizing: content-box;
+}
+.meteoro:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 85px solid white;
+  position: absolute;
+  left: 2px;
+  top: 0;
+}
+.meteoro.style1 { animation-name: meteoroStyle1; }
+.meteoro.style2 { animation-name: meteoroStyle2; }
+.meteoro.style3 { animation-name: meteoroStyle3; }
+.meteoro.style4 { animation-name: meteoroStyle4; }
+.lua {
+  position: absolute;
+  right: 200px;
+  top: 150px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+  background-color: #fff;
+  animation-name: lua;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  box-sizing: content-box;
+}
+.lua .textura {
+  background-image: url(https://raw.githubusercontent.com/interaminense/starry-sky/master/src/img/bgMoon.png);
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.4;
+}
+.floresta {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.floresta img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes escurecer {
+  0%   { top: 0; }
+  100% { top: 100%; }
+}
+@keyframes estrela {
+  0% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.05);
+  }
+}
+@keyframes estrelaDestacada {
+  0% {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+  }
+  20% {
+    background-color: #FFC4C4;
+    box-shadow: 0 0 10px 0px rgb(255, 196, 196, 1);
+  }
+  80% {
+    background-color: #C4CFFF;
+    box-shadow: 0 0 10px 0px rgb(196, 207, 255, 1);
+  }
+  100% {
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+  }
+}
+@keyframes meteoroStyle1 {
+  0% { opacity: 0; right: 300px; top: 100px; }
+  30% { opacity: .3; }
+  60% { opacity: .3; }
+  100% { opacity: 0; right: 1000px; top: 600px; }
+}
+@keyframes meteoroStyle2 {
+  0% { opacity: 0; right: 700px; top: 100px; }
+  30% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; right: 1400px; top: 600px; }
+}
+@keyframes meteoroStyle3 {
+  0% { opacity: 0; right: 300px; top: 300px; }
+  30% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; right: 1000px; top: 800px; }
+}
+@keyframes meteoroStyle4 {
+  0% { opacity: 0; right: 700px; top: 300px; }
+  30% { opacity: 1; }
+  60% { opacity: 1; }
+  100% { opacity: 0; right: 1400px; top: 800px; }
+}
+@keyframes lua {
+  0%{
+    box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+  }
+  50% {
+    box-shadow: 0 0 80px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+  }
+  100% {
+    box-shadow: 0 0 160px 0px #fff, 0 0 30px -4px #fff, 0 0 8px 2px rgba(255, 255, 255, 0.26);
+  }
+}
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.sitemap_wrap{
+  width: 1200px;
+  height: 700px;
+  margin: 100px auto 100px; 
+}
+.sitemap{
+  margin-top: 20px;
+  width: 600px;  
+  height: 130px;
+}  
+.sitemap h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f; 
+  padding-left: 10px; 
+}
+.sitemap p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;
+}
+.sitemapclick{
+  margin-top: 60px;
+  width: 1200px;
+  height: 550px;
+  background: url(../images/sitemap.png) no-repeat;
+  position: relative;
+}
+.sitemap_home{
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform: translateX(-60px);  
+}
+.sitemap_home li a{
+  padding: 5px 30px;
+  font-size: 24px;
+  font-weight: 900;
+  border: 5px solid #0a2855;
+}
+.sitemap_sub{
+  display: flex;  
+  position: absolute;
+  top:160px;    
+}
+.sitemap_sub li:nth-child(2) a{
+  margin-left: 174px;
+  padding: 0 20px;
+}
+.sitemap_sub li:nth-child(3) a{
+  margin-left: 192px;
+  padding: 0 20px;
+}
+.sitemap_sub li:nth-child(4) a{
+  margin-left: 160px;
+}
+.sitemap_sub li a{
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  border: 5px solid #0a2855;
+}
+.about_sub{
+  position: absolute;
+  top:185px;
+  left: 60px;
+}
+.about_sub li{
+  margin-top: 50px;
+}
+.about_sub li:nth-child(3){
+  margin-top: 50px;
+}
+.about_sub li a{  
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  border: 5px solid #0a2855;
+}
+.rooms_sub{
+  position: absolute;
+  top:185px;
+  left: 390px;
+}
+.rooms_sub li{
+  margin-top: 50px;
+}
+.rooms_sub li:nth-child(4){
+  margin-top: 40px;
+}
+.rooms_sub li a{  
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  border: 5px solid #0a2855;
+}
+.activity_sub{
+  position: absolute;
+  top:185px;
+  left: 710px;
+}
+.activity_sub li{
+  margin-top: 50px;
+}
+.activity_sub li a{  
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  border: 5px solid #0a2855;
+}
+.reservation_sub{
+  position: absolute;
+  top:185px;
+  left: 1035px;
+}
+.reservation_sub li{
+  margin-top: 50px;
+}
+.reservation_sub li a{  
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  border: 5px solid #0a2855;
+}
+.sitemapclick li a:hover{
+  background-color: #0a2855;
+  color: #f9f8ed;
+}  
+/*tab02*/
+.tab02bg{
+  margin: 20px auto 100px;
+  width: 1200px;
+  height: 1400px;
+  background: url(../images/map.jpg) no-repeat;
+  position: relative;
+}
+.guidemap_wrap{
+  margin: 100px auto 0;
+  width: 1200px;  
+  height: 130px;
+}  
+.guidemap_wrap h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f; 
+  padding-left: 10px; 
+}
+.guidemap_wrap p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;
+}
+.guidemap{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 650px;
+  height: 380px;
+}
+.guidemap h1{
+  font-family: "ELAND_Nice_M";
+  font-size: 30px;
+  color: #f9f8ed;
+}
+.guidemap h3{
+  color: #fbb040;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.guide{
+  display: flex;
+  margin-top: 10px;  
+}
+.guide li a{
+  display: block;
+  color: #f9f8ed;
+  font-weight: 500;
+  padding-right: 10px;
+}
+.guide li a:hover{
+  color: #fbb040;
+}
+.guidemap p{
+  color: #f9f8ed;
+  margin-top: 30px;
+  font-weight: 700;  
+  line-height: 25px;
+}
+.numposition{
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  right: 65px;
+  top: 389px;
+}
+.guide01_01{
+  display: flex;
+  gap: 87px;  
+}
+.guide01_01 li a{
+  visibility: hidden;
+}
+.guide01_01 .hoveron a{
+  visibility: visible;
+}
+.guide02_01{
+  display: flex;
+  margin-top: 46px;
+  margin-left: 22px;
+  gap: 87px;
+}
+.guide02_01 li a{
+  visibility: hidden;
+}
+.guide02_01 .hoveron a{
+  visibility: visible;
+}
+.numposition2{
+  width: 200px;
+  height: 600px;
+  position: absolute;
+  left: 470px;
+  bottom: 243px;  
+}
+.guide03_01{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 20px; 
+  margin-left: 5px;
+}
+.guide03_01 li a{
+  visibility: hidden;
+}
+.guide03_01 .hoveron a{
+  visibility: visible;
+}
+.guide03_01 li:nth-child(2) a{
+  margin-left: 48px;
+}
+.guide03_01 li:nth-child(3) a{
+  margin-left: 92px;
+}
+.guide03_01 li:nth-child(4) a{
+  margin-left: 140px;
+}
+.guide03_01 li:nth-child(5) a{
+  margin-left: 190px;
+}
+.numposition3{
+  width: 200px;
+  height: 600px;
+  position: absolute;
+  left: 610px;
+  bottom: 255px;  
+}
+.guide04_01{
+  display: flex;
+  flex-direction: column;
+  gap: 45px; 
+}
+.guide04_01 li a{
+  visibility: hidden;
+}
+.guide04_01 .hoveron a{
+  visibility: visible;
+}
+.guide04_01 li:nth-child(2) a{
+  margin-left: 48px;
+}
+.guide04_01 li:nth-child(3) a{
+  margin-left: 102px;
+}
+.guide04_01 li:nth-child(4) a{
+  margin-left: 160px;
+}
+.guide04_01 li:nth-child(5) a{
+  margin-left: 230px;
+}
+/*tab03*/
+.tab03_title{
+  width: 100%;
+  height: 500px;  
+  background: url(../images/tab03_01.jpg);
+}
+.tab03_bg{   
+  padding: 50px 0;
+  width: 100%;
+  height: 560px;
+  background-color: rgba(251, 176, 64, 0.3); 
+}
+.slider h3{
+  font-size: 20px;
+  font-weight: 900; 
+  text-align: center; 
+}
+.slider h3 a{
+  display: inline-block;
+  color: #f9f8ed;
+  font-size: 14px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background-color: #fbb040;
+}
+.slider h4{
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.product1{
+  animation: product 2s infinite alternate linear;
+}
+@keyframes product{
+  0%{transform: translateY(0);}
+  100%{transform: translateY(50px);}
+}
+.product_shadow{
+  animation: shadow 2s infinite alternate linear;
+}
+@keyframes shadow{
+  0%{transform: translateY(0px);}
+  100%{transform: translateY(-50px);}
+}
+.slider{
+	width: 1200px;
+	margin: auto;
+  text-align: center;
+}
+.slider .slick-slide> div{
+	margin: 20px;
+}
+.slider .slick-slide div img{
+	display: block;
+	width: 100%;
+}
+/* 시작 이미지 꾸미기 */
+.slider .slick-current> div{
+	margin: 10px 10px;
+	transition: all 1s;
+}
+/*이동버튼 꾸미기*/
+.slider .slick-prev:before, 
+.slider .slick-next:before{
+	content:'';/*원래 버튼 없애기*/
+}
+.slider .slick-prev,
+.slider .slick-next{
+	width:27px;
+	height:50px;
+}
+.slider .slick-prev{
+	background:url(../images/prev.png) no-repeat;
+  top: 200px;
+	left:-50px;  
+}
+.slider .slick-prev:hover{
+	background:url(../images/prev_hover.png) no-repeat;
+}
+.slider .slick-next{
+	background:url(../images/next.png) no-repeat;
+  top: 200px;
+	right:-50px;
+}
+.slider .slick-next:hover{
+	background:url(../images/next_hover.png) no-repeat;
+}
+/*블릿버튼 꾸미기*/
+.slider .slick-dots li button::before{
+	content: '';/*원래 버튼 없애기*/
+}
+.slider .slick-dots li button{
+	width:10px;
+	height:10px;
+	padding:0;
+	background: #fbb040;
+	border-radius:50%;
+	opacity: 0.5;
+}
+.slider .slick-dots li.slick-active button{
+	background:#fbb040;
+	opacity:1
+}
+.slick-dots{
+  top:430px;
+}
+.product_bg{
+  background: url(../images/goods_bg.jpg) no-repeat;
+  width: 100%;
+  height: 2400px;
+  margin-bottom: 80px;
+}
+.object01_wrap{
+  width: 1200px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  padding-top: 210px;
+}
+.object01_01_text{
+  width: 200px;
+  height: 500px;
+  margin-right: 80px;
+}
+.object01_01_text h1{
+  font-family: "ELAND_Nice_M";
+  font-size: 24px;   
+  color: #888;  
+  padding-bottom: 15px;
+}
+.object01_01_text h2{  
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #233b5f;
+  width: 200px;
+}
+.object01_01_text h3{
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 15px;  
+}
+.object01_01_text h4 a{
+  display: inline-block;
+  background-color: #233b5f;
+  color: #f9f8ed;
+  font-size: 14px;
+  padding: 0 10px;  
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.object01_01_text h4 a:hover{
+  background-color: #fbb040;
+}
+.object01_01_img{
+  margin-right: 40px;
+}
+.object01_02_img{
+  margin-left: 10px;
+}
+.object02_wrap{
+  width: 1200px;
+  display: flex;
+  margin: auto;
+  height: 500px;
+  padding-top: 120px;
+  justify-content: end;
+}
+.object03_wrap{
+  width: 1200px;
+  display: flex;
+  margin: auto;
+  height: 500px;
+  padding-top: 120px;  
+}
+.object03_text{
+  margin-right: 200px;
+}
+.object03_text h1{
+  font-family: "ELAND_Nice_M";
+  font-size: 24px;   
+  color: #fbb040;  
+  padding-bottom: 15px;
+}
+.object03_text h2{  
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #f9f8ed;
+  color: #f9f8ed;
+  width: 200px;
+}
+.object03_text h3{
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 15px;  
+  color: #f9f8ed;
+}
+.object03_text h4 a{
+  display: inline-block;
+  background-color: #f9f8ed;
+  color: #233b5f;
+  font-size: 14px;
+  padding: 0 10px;  
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.object03_text h4 a:hover{
+  background-color: #fbb040;
+  color: #f9f8ed;
+}
+.object04_wrap{
+  width: 1200px;
+  height: 500px;
+  margin: 140px auto 0;
+  padding-top: 200px;
+  display: flex;
+}
+.object04_01_text{
+  width: 200px;
+  height: 500px;
+  margin-right: 80px;
+  padding-top: 40px;
+}
+.object04_01_text h1{
+  font-family: "ELAND_Nice_M";
+  font-size: 24px;   
+  color: #fbb040;  
+  padding-bottom: 15px;
+}
+.object04_01_text h2{  
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #f9f8ed;
+  width: 200px;
+  color: #f9f8ed;
+}
+.object04_01_text h3{
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 15px;  
+  color: #f9f8ed;
+}
+.object04_01_text h4 a{
+  display: inline-block;
+  background-color: #f9f8ed;
+  color: #233b5f;
+  font-size: 14px;
+  padding: 0 10px;  
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.object04_01_text h4 a:hover{
+  background-color: #fbb040;
+  color: #f9f8ed;
+}
+.object04_01_img{
+  margin-right: 200px;
+}
+.object04_02_text{
+  width: 200px;
+  height: 500px;  
+  padding-top: 40px;
+}
+.object04_02_text h1{
+  font-family: "ELAND_Nice_M";
+  font-size: 24px;   
+  color: #888;  
+  padding-bottom: 15px;
+}
+.object04_02_text h2{  
+  font-size: 32px;
+  font-weight: 800;
+  padding-bottom: 30px;
+  border-bottom: 3px solid #233b5f;
+  width: 200px;
+  color: #233b5f;
+}
+.object04_02_text h3{
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 15px;  
+  color: #233b5f;
+}
+.object04_02_text h4 a{
+  display: inline-block;
+  background-color: #233b5f;
+  color: #f9f8ed;
+  font-size: 14px;
+  padding: 0 10px;  
+  border-radius: 5px;
+  margin-top: 15px;
+}
+.object04_02_text h4 a:hover{
+  background-color: #fbb040;  
+}
+.object04_02_img{
+  margin-right: 120px;
+}
+/*section04*/
+.locate_wrap{
+  margin: 100px auto 0;
+  width: 1200px;  
+  height: 130px;
+}  
+.locate_wrap h1{  
+  color: #233b5f;
+  font-family: "ELAND_Nice_M";
+  font-size: 40px;
+  padding-top: 10px;
+  height: 50px;
+  border-left: 10px solid #233b5f; 
+  padding-left: 10px; 
+}
+.locate_wrap p{
+  color: #233b5f;
+  padding-top: 20px;
+  font-weight: 500;
+}
+.locate_map{
+  width: 1200px;
+  height: 600px;
+  margin: auto;
+}
+iframe{
+  width: 1200px; 
+  height: 600px; 
+  border:0; 
+}
+.map_text{
+  width: 1200px;
+  height: 40px;
+  margin: 40px auto 40px;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.map_text h1{
+  font-size: 38px;
+  font-family: "ELAND_Nice_M" ;
+}
+.map_text h2 img{
+  padding-right: 10px;
+}
+.map_text h2{
+  font-size: 20px;
+  font-weight: 700;   
+}
+#tab04 table{
+  width: 1200px;
+  margin: 0 auto 100px;    
+}
+#tab04 table h3{
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+#tab04 table th{
+  height: 180px;
+  width: 200px;
+  text-align: center;
+  border-bottom: 3px dotted #233b5f;  
+}
+#tab04 table td{
+  height: 180px;
+  border-bottom: 3px dotted #233b5f;
+}
+#tab04 table ul li{
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+.green{
+  background: green;
+  color: #f9f8ed;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin-right: 10px;
+}
+.orange{
+  background: #0a2855;
+  color: #f9f8ed;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin-right: 10px;
+}
+.red{
+  background: tomato ;
+  color: #f9f8ed;
+  border-radius: 3px;
+  padding: 2px 10px;
+  margin-right: 10px;
+}
+.end{
+  width: 1200px;
+  height: 700px;
+  position: relative;
+  margin: 0 auto 100px;  
+}
+.end h5{
+  position: absolute;
+  top: 0px;
+  left: 50px;
+}
+.end .aos1{
+  position: absolute;
+  top: 150px;
+  left: 250px;
+}
+.end h4{
+  position: absolute;
+  bottom: 0px;
+  left: 350px;
+}
+.end h3{
+  position: absolute;
+  top: 0px;
+  right: 100px;
+}
+.end h2{
+  position: absolute;
+  top: 50px;
+  right: 100px;
+}
+.end p{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 28px;    
+  line-height: 28px; 
+  font-family: "ELAND_Nice_M" ; 
+}  
+/*푸터*/
+footer{
+  width: 100%;
+  height: 308px;
+  background: url(../images/footer.png);
+}
+#footer_inner{
+  width: 1200px;
+  height: 308px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.f_nav{
+  padding-top: 50px;
+}
+.f_nav li{
+  float: left;
+}
+.f_nav li a{
+  font-size: 14px;
+  color: #f9f8ed;
+  padding-right: 20px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.f_nav li a:hover{
+  opacity: 1;
+}
+.footer_wrap{
+  clear: both;
+  width: 1200px;
+  margin: 50px auto 0;
+}
+.footer_wrap img{
+  float: left;
+}
+.wrap1{
+  float: left;
+  margin-left: 100px;
+}
+.wrap1 p{
+  color: #f9f8ed;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.wrap1_text li{
+  color: #f9f8ed;
+  font-size: 12px;
+  font-weight: 300;
+}
+.wrap1 h6{
+  color: #f9f8ed;
+  font-size: 12px;
+  padding-top: 20px;
+  font-weight: 300;
+}
+.wrap2{
+  float: right;
+}
+.wrap2 p{
+  color: #f9f8ed;
+  font-size: 16px;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.wrap2_text li{
+  color: #f9f8ed;
+  font-size: 12px;
+  font-weight: 300;
+  padding-left: 20px;
+  
+}
+.wrap2_text li:nth-child(1){
+  background: url(../images/tel.png) no-repeat 0 6px;
+}
+.wrap2_text li:nth-child(2){
+  background: url(../images/email.png) no-repeat 0 6px;
+}
+.icon{
+  padding-top: 20px;
+}
+.icon li{
+  float: left;
+}
+.icon li a{
+  padding-right: 10px;
+  position: relative;
+  display: inline-block; 
+}
+.icon_hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.icon_hover:hover{
+  opacity: 1;
+  transform: all 1s;
+}
